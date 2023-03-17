@@ -1,16 +1,18 @@
 return {
+  { "tpope/vim-rails", lazy = false, ft = { "ruby", "rake" } },
+  { "tpope/vim-ruby", lazy = false, ft = "ruby" },
   { "cedricpim/vim-fetch", lazy = false },
   { "pechorin/any-jump.vim", lazy = false },
   { "terryma/vim-expand-region", lazy = false },
   { "simnalamburt/vim-mundo", lazy = false },
   { "psliwka/vim-smoothie", lazy = false, init = function() vim.g.smoothie_no_default_mappings = true end, },
-  { "MTDL9/vim-log-highlighting", lazy = false },
+  { "MTDL9/vim-log-highlighting", lazy = false, ft = "log" },
   {
     "wfxr/minimap.vim",
     lazy = false,
     init = function()
       vim.g.minimap_width = 10
-      vim.g.minimap_auto_start = 1
+      vim.g.minimap_auto_start = 0
       vim.g.minimap_auto_start_win_enter = 1
     end
   },
