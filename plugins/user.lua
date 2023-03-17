@@ -13,6 +13,13 @@ return {
       vim.g.minimap_auto_start_win_enter = 1
     end
   },
+  { 
+    "vimwiki/vimwiki",
+    lazy = false,
+    init = function() 
+      vim.g.vimwiki_list = { { path = vim.env.VIM_WIKI, syntax = 'markdown', ext = '.md' } }
+    end
+  },
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
