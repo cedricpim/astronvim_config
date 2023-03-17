@@ -31,6 +31,10 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
+  x = {
+    ["v"] = { '<Plug>(expand_region_expand)' },
+    ["V"] = { '<Plug>(expand_region_shrink)' }
+  },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
