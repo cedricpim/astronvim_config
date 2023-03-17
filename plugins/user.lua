@@ -1,4 +1,5 @@
 return {
+  { "cedricpim/vim-fetch", lazy = false },
   { "pechorin/any-jump.vim", lazy = false },
   { "terryma/vim-expand-region", lazy = false },
   { "simnalamburt/vim-mundo", lazy = false },
