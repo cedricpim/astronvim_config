@@ -1,4 +1,5 @@
 return {
+  { "MTDL9/vim-log-highlighting", lazy = false },
   {
     "wfxr/minimap.vim",
     lazy = false,
