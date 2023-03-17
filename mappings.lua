@@ -24,7 +24,9 @@ return {
     ["<leader>pR"] = { function() require("user.utils").copy(vim.fn.expand("%") .. ":" .. vim.fn.line(".")) end, desc = "Yank relative path with line" },
     ["bn"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
     ["bp"] = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
-    ["<leader>bX"] = { function() require("astronvim.utils.buffer").close_all(false, false) end, desc = "Close all buffers without saving" }
+    ["<leader>bX"] = { function() require("astronvim.utils.buffer").close_all(false, false) end, desc = "Close all buffers without saving" },
+    ["<C-u>"] = { "<cmd>call smoothie#backwards()<cr>", silent = true, remap = true },
+    ["<C-n>"] = { "<cmd>call smoothie#forwards()<cr>", silent = true, remap = true },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

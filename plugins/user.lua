@@ -1,4 +1,5 @@
 return {
+  { "psliwka/vim-smoothie", lazy = false, init = function() vim.g.smoothie_no_default_mappings = true end, },
   { "MTDL9/vim-log-highlighting", lazy = false },
   {
     "wfxr/minimap.vim",
