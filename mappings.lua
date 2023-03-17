@@ -27,6 +27,7 @@ return {
     ["<leader>bX"] = { function() require("astronvim.utils.buffer").close_all(false, false) end, desc = "Close all buffers without saving" },
     ["<C-u>"] = { "<cmd>call smoothie#backwards()<cr>", silent = true, remap = true },
     ["<C-n>"] = { "<cmd>call smoothie#forwards()<cr>", silent = true, remap = true },
+    ["<leader>m"] = { "<cmd>MundoToggle<cr>", desc = "MundoToggle" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
