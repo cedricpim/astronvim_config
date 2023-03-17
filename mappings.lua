@@ -28,12 +28,14 @@ return {
     ["<C-u>"] = { "<cmd>call smoothie#backwards()<cr>", silent = true, remap = true },
     ["<C-n>"] = { "<cmd>call smoothie#forwards()<cr>", silent = true, remap = true },
     ["<leader>m"] = { "<cmd>MundoToggle<cr>", desc = "MundoToggle" },
+    ["<leader>fj"] = { "<cmd>AnyJump<cr>", desc = "Show definition references" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   x = {
     ["v"] = { '<Plug>(expand_region_expand)' },
-    ["V"] = { '<Plug>(expand_region_shrink)' }
+    ["V"] = { '<Plug>(expand_region_shrink)' },
+    ["<leader>fj"] = { "<cmd>AnyJump<cr>", desc = "Show definition references" },
   },
   t = {
     -- setting a mapping to false will disable it
