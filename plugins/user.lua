@@ -6,6 +6,8 @@ return {
   { "terryma/vim-expand-region", lazy = false },
   { "simnalamburt/vim-mundo", lazy = false },
   { "psliwka/vim-smoothie", lazy = false, init = function() vim.g.smoothie_no_default_mappings = true end, },
+  { "lambdalisue/suda.vim", lazy = false, init = function() vim.g.suda_smart_edit = 1 end, },
+  { "luochen1990/rainbow", lazy = false, init = function() vim.g.rainbow_active = 1 end },
   { "MTDL9/vim-log-highlighting", lazy = false, ft = "log" },
   {
     "wfxr/minimap.vim",
