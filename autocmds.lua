@@ -19,7 +19,6 @@ autocmd({ "BufWritePre", "FileWritePre" }, {
   end,
 })
 
-
 local toggle_relative_number = augroup("toggle_relative_number", { clear = true })
 autocmd("InsertEnter", {
   desc = "Use absolut line numbers",
@@ -32,4 +31,19 @@ autocmd("InsertLeave", {
   group = toggle_relative_number,
   pattern = "*",
   command = "setlocal relativenumber"
+})
+
+local user_persistent_undo = augroup("user_persistent_undo", { clear = true })
+autocmd("BufWritePre", { desc = "Do not create undo file", group = user_persistent_undo, pattern = "/tmp/*", command = "setlocal noundofile" })
+autocmd("BufWritePre", { desc = "Do not create undo file", group = user_persistent_undo, pattern = "COMMIT_EDITMSG", command = "setlocal noundofile" })
+autocmd("BufWritePre", { desc = "Do not create undo file", group = user_persistent_undo, pattern = "MERGE_MSG", command = "setlocal noundofile" })
+autocmd("BufWritePre", { desc = "Do not create undo file", group = user_persistent_undo, pattern = "*.tmp", command = "setlocal noundofile" })
+autocmd("BufWritePre", { desc = "Do not create undo file", group = user_persistent_undo, pattern = "*.bak", command = "setlocal noundofile" })
+
+local user_secure = augroup("user_secure", { clear = true })
+autocmd({ "BufNewFile", "BufReadPre" }, {
+  desc = "Disable swap/undo/viminfo/shada files in temp directories or shm",
+  group = user_secure,
+  pattern = { "/tmp/*", vim.env.TMPDIR .. "/*", "*/shm/*", "/private/var/*", ".vault.vim" },
+  command = "setlocal noswapfile noundofile nobackup nowritebackup viminfo= shada="
 })

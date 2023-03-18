@@ -1,4 +1,14 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
+
+local cache_dir = vim.fn.expand(vim.env.XDG_CACHE_HOME) .. "/nvim"
+local data_dir = vim.fn.expand(vim.env.XDG_DATA_HOME) .. "/nvim"
+
+os.execute("mkdir -p " .. cache_dir .. "/swap")
+os.execute("mkdir -p " .. cache_dir .. "/undo")
+os.execute("mkdir -p " .. cache_dir .. "/backup")
+os.execute("mkdir -p " .. cache_dir .. "/view")
+os.execute("mkdir -p " .. data_dir .. "/spell")
+
 return {
   opt = {
     -- set to true or false etc.
@@ -8,7 +18,26 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = true, -- sets vim.opt.wrap
     magic = true, -- For regular expressions turn magic on
-    swapfile = false
+    swapfile = false,
+    modeline = false, -- disable modelines explicitly
+    modelines = 0, -- ensure modelines do not run
+    wildignorecase = true,
+    wildignore = { 
+      ".git", ".hg" , ".svn" , ".stversions", "*.pyc", "*.spl", "*.o", "*.out", "*~", "%*",
+      "*.jpg", "*.jpeg", "*.png", "*.gif", "*.zip", "tmp/**"
+    },
+    directory = { cache_dir, cache_dir .. "/swap//", "~/tmp", "/var/tmp", "/tmp" },
+    undodir = { cache_dir, cache_dir .. "/undo//", "~/tmp", "/var/tmp", "/tmp" },
+    backupdir = { cache_dir, cache_dir .. "/backup//", "~/tmp", "/var/tmp", "/tmp" },
+    viewdir = cache_dir .. "/view//",
+    spellfile = data_dir .. "/spell/en.utf-8.add",
+    history = 2000,
+    shada="!,'300,<50,@100,s10,h",
+    backupskip = { "/tmp/*", vim.env.TMPDIR .. "/*", "*/shm/*", "/private/var/*", ".vault.vim" }, -- Secure sensitive information, disable backup files in temp directories
+    breakindentopt = "shift:2,min:20",
+    ttimeoutlen = 10, -- Time out on key codes
+    list = true,
+    fillchars = "vert:│,horiz:─,eob:\\", -- add a bar for vertical splits and a dash for horizontal splits
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
