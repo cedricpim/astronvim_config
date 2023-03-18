@@ -25,8 +25,6 @@ return {
     ["bn"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
     ["bp"] = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
     ["<leader>bX"] = { function() require("astronvim.utils.buffer").close_all(false, false) end, desc = "Close all buffers without saving" },
-    ["<C-u>"] = { "<cmd>call smoothie#backwards()<cr>", silent = true, remap = true },
-    ["<C-n>"] = { "<cmd>call smoothie#forwards()<cr>", silent = true, remap = true },
     ["<leader>m"] = { "<cmd>MundoToggle<cr>", desc = "MundoToggle" },
     ["<leader>fj"] = { "<cmd>AnyJump<cr>", desc = "Show definition references" },
     -- quick save
