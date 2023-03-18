@@ -22,8 +22,6 @@ return {
     ["<leader>pF"] = { function() require("user.utils").copy(vim.fn.expand("%:p") .. ":" .. vim.fn.line(".")) end, desc = "Yank full path with line" },
     ["<leader>pr"] = { function() require("user.utils").copy(vim.fn.expand("%")) end, desc = "Yank relative path" },
     ["<leader>pR"] = { function() require("user.utils").copy(vim.fn.expand("%") .. ":" .. vim.fn.line(".")) end, desc = "Yank relative path with line" },
-    ["bn"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
-    ["bp"] = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
     ["<leader>bX"] = { function() require("astronvim.utils.buffer").close_all(false, false) end, desc = "Close all buffers without saving" },
     ["<leader>m"] = { "<cmd>MundoToggle<cr>", desc = "MundoToggle" },
     ["<leader>fj"] = { "<cmd>AnyJump<cr>", desc = "Show definition references" },
