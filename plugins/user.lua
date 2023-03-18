@@ -6,9 +6,9 @@ return {
   { "terryma/vim-expand-region", lazy = false },
   { "simnalamburt/vim-mundo", lazy = false },
   { "lambdalisue/suda.vim", lazy = false, init = function() vim.g.suda_smart_edit = 1 end, },
-  { "luochen1990/rainbow", lazy = false, init = function() vim.g.rainbow_active = 1 end },
   { "MTDL9/vim-log-highlighting", lazy = false, ft = "log" },
   { "karb94/neoscroll.nvim", init = function() require('neoscroll').setup() end },
+  -- { 'kdheepak/lazygit.nvim', cmd = "LazyGit" },
   {
     "wfxr/minimap.vim",
     lazy = false,
