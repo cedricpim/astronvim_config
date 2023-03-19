@@ -1,5 +1,6 @@
 return {
   { "catppuccin/nvim", as = "catppuccin" },
+  { "karb94/neoscroll.nvim", init = function() require('neoscroll').setup() end },
   { "tpope/vim-rails", lazy = false, ft = { "ruby", "rake" } },
   { "tpope/vim-ruby", lazy = false, ft = "ruby" },
   { "cedricpim/vim-fetch", lazy = false },
@@ -8,7 +9,6 @@ return {
   { "simnalamburt/vim-mundo", lazy = false },
   { "lambdalisue/suda.vim", lazy = false, init = function() vim.g.suda_smart_edit = 1 end, },
   { "MTDL9/vim-log-highlighting", lazy = false, ft = "log" },
-  { "karb94/neoscroll.nvim", init = function() require('neoscroll').setup() end },
   { 
     "vimwiki/vimwiki",
     lazy = false,
