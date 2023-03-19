@@ -2,7 +2,7 @@ return {
   { "catppuccin/nvim", as = "catppuccin" },
   { "karb94/neoscroll.nvim", init = function() require('neoscroll').setup() end },
   { "tpope/vim-rails", lazy = false, ft = { "ruby", "rake" } },
-  { "tpope/vim-ruby", lazy = false, ft = "ruby" },
+  { "vim-ruby/vim-ruby", lazy = false, ft = "ruby" },
   { "cedricpim/vim-fetch", lazy = false },
   { "pechorin/any-jump.vim", lazy = false },
   { "terryma/vim-expand-region", lazy = false },
