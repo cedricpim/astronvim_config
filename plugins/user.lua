@@ -1,4 +1,5 @@
 return {
+  { "catppuccin/nvim", as = "catppuccin" },
   { "tpope/vim-rails", lazy = false, ft = { "ruby", "rake" } },
   { "tpope/vim-ruby", lazy = false, ft = "ruby" },
   { "cedricpim/vim-fetch", lazy = false },
