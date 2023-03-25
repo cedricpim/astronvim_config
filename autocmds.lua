@@ -47,3 +47,11 @@ autocmd({ "BufNewFile", "BufReadPre" }, {
   pattern = { "/tmp/*", vim.env.TMPDIR .. "/*", "*/shm/*", "/private/var/*", ".vault.vim" },
   command = "setlocal noswapfile noundofile nobackup nowritebackup viminfo= shada="
 })
+
+autocmd("FileType", {
+  desc = "Disable autocomplete on CSVs",
+  pattern = "csv",
+  callback = function()
+    require('cmp').setup.buffer { enabled = false }
+  end,
+})
