@@ -2,6 +2,8 @@ return {
   "rebelot/heirline.nvim",
   opts = function(_, opts)
     local status = require "astronvim.utils.status"
+    -- Disable the check for winbar to allow vim-fetch to work
+    opts.opts.disable_winbar_cb = function(args) return false end
     opts.statusline[3] = status.component.file_info { filetype = {}, filename = false }
 
     opts.tabline[2] = status.heirline.make_buflist(status.component.tabline_file_info { close_button = false })
