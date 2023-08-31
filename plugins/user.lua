@@ -6,6 +6,7 @@ return {
   { "cedricpim/vim-fetch", lazy = false },
   { "mechatroner/rainbow_csv", lazy = false, ft = "csv" },
   { "pechorin/any-jump.vim", lazy = false },
+  { "nordtheme/vim", lazy = false },
   { "terryma/vim-expand-region", lazy = false },
   { "simnalamburt/vim-mundo", lazy = false },
   { "lambdalisue/suda.vim", lazy = false, init = function() vim.g.suda_smart_edit = 1 end },
