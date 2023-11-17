@@ -16,8 +16,8 @@ return {
       name = "copilot_cmp",
       dependencies = { "zbirenbaum/copilot.lua" },
       opts = {},
-      config = function ()
-       require("copilot_cmp").setup()
+      config = function()
+        require("copilot_cmp").setup()
       end
     },
     opts = function(_, opts) table.insert(opts.sources, 1, { name = "copilot", priority = 1500 }) end,
