@@ -11,10 +11,10 @@ return {
   { "simnalamburt/vim-mundo", lazy = false },
   { "lambdalisue/suda.vim", lazy = false, init = function() vim.g.suda_smart_edit = 1 end },
   { "MTDL9/vim-log-highlighting", lazy = false, ft = "log" },
-  { 
+  {
     "vimwiki/vimwiki",
     lazy = false,
-    init = function() 
+    init = function()
       vim.g.vimwiki_list = { { path = vim.env.VIM_WIKI, syntax = 'markdown', ext = '.md' } }
     end
   },
